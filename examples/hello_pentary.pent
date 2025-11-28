@@ -1,0 +1,12 @@
+// Hello World in PentLang
+print("Hello, Pentary World!")
+
+// Balanced quinary numbers
+let a = +2+1   // +2×5¹ + 1×5⁰ = 10 + 1 = 11
+let b = +1-1   // +1×5¹ + (-1)×5⁰ = 5 - 1 = 4
+let c = -2-1   // (-2)×5¹ + (-1)×5⁰ = -10 - 1 = -11
+
+print("a =", a)
+print("b =", b)
+print("c =", c)
+print("a + b =", a + b)

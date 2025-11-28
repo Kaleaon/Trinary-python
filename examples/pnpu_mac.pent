@@ -1,0 +1,31 @@
+// PNPU Shift-Add MAC operations
+// Demonstrates the "No-Multiplier" core logic
+
+// Create activation vector
+let activations = [10, 20, 30, 40, 50]
+
+// Create weight vector (must be -2, -1, 0, +1, or +2)
+let weights = [+2, -1, +1, 0, +2]
+
+print("Activations:", activations)
+print("Weights:", weights)
+
+// Perform MAC operation using shift-add
+// +2: shift left (multiply by 2)
+// -1: negate
+// +1: pass through
+// 0: zero
+// -2: shift left and negate
+
+let result = activations.mac(weights)
+print("MAC result:", result)
+
+// Manual calculation:
+// 10 * +2 = 20 (shift left)
+// 20 * -1 = -20 (negate)
+// 30 * +1 = 30 (pass through)
+// 40 * 0 = 0 (zero)
+// 50 * +2 = 100 (shift left)
+// Total: 20 - 20 + 30 + 0 + 100 = 130
+
+print("Expected: 130")

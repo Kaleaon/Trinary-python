@@ -1,0 +1,29 @@
+// Five-state logic demonstration
+// Values: absolute_yes (+2), maybe_yes (+1), unknown (0), maybe_no (-1), absolute_no (-2)
+
+let x = absolute_yes
+let y = maybe_yes
+let z = unknown
+let w = maybe_no
+let v = absolute_no
+
+print("x =", x)
+print("y =", y)
+print("z =", z)
+print("w =", w)
+print("v =", v)
+
+// Five-state AND (returns minimum)
+print("x and y =", x and y)  // absolute_yes and maybe_yes = maybe_yes
+print("x and z =", x and z)  // absolute_yes and unknown = unknown
+print("v and w =", v and w)  // absolute_no and maybe_no = absolute_no
+
+// Five-state OR (returns maximum)
+print("x or z =", x or z)    // absolute_yes or unknown = absolute_yes
+print("y or w =", y or w)    // maybe_yes or maybe_no = maybe_yes
+print("v or z =", v or z)    // absolute_no or unknown = unknown
+
+// Five-state NOT
+print("not x =", not x)      // not absolute_yes = absolute_no
+print("not v =", not v)      // not absolute_no = absolute_yes
+print("not z =", not z)      // not unknown = unknown
