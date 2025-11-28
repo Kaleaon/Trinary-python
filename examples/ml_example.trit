@@ -1,0 +1,51 @@
+// Simple ML operations example
+
+// Create feature vectors
+let features1 = [1, 2, 3]
+let features2 = [4, 5, 6]
+let features3 = [7, 8, 9]
+
+// Calculate mean of each feature
+let mean1 = features1.mean()
+let mean2 = features2.mean()
+let mean3 = features3.mean()
+
+print("Feature means:")
+print("  features1.mean() =", mean1)
+print("  features2.mean() =", mean2)
+print("  features3.mean() =", mean3)
+
+// Calculate dot products (similarity)
+let similarity_12 = features1 * features2
+let similarity_13 = features1 * features3
+let similarity_23 = features2 * features3
+
+print("Similarities:")
+print("  features1 · features2 =", similarity_12)
+print("  features1 · features3 =", similarity_13)
+print("  features2 · features3 =", similarity_23)
+
+// Simple normalization
+function normalize(v) {
+    let sum = v.sum()
+    return v / sum
+}
+
+let normalized = normalize(features1)
+print("Normalized features1 =", normalized)
+
+// Three-state classification
+function classify(value) {
+    if value > 5 {
+        return true  // Positive class
+    } elif value < -5 {
+        return false  // Negative class
+    } else {
+        return maybe  // Uncertain
+    }
+}
+
+print("Classification:")
+print("  classify(10) =", classify(10))
+print("  classify(-10) =", classify(-10))
+print("  classify(0) =", classify(0))

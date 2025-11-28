@@ -1,0 +1,35 @@
+// Functions in TritLang
+function add(a, b) {
+    return a + b
+}
+
+function factorial(n) {
+    if n <= 1 {
+        return 1
+    } else {
+        return n * factorial(n - 1)
+    }
+}
+
+function fibonacci(n) {
+    if n <= 1 {
+        return n
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2)
+    }
+}
+
+// Test functions
+print("add(5, 3) =", add(5, 3))
+print("factorial(5) =", factorial(5))
+print("fibonacci(10) =", fibonacci(10))
+
+// Balanced ternary in functions
+function balanced_add(a, b) {
+    // Convert to balanced ternary, add, return result
+    return a + b
+}
+
+let bt1 = +0-  // 8
+let bt2 = +-0  // 6
+print("balanced_add(+0-, +-0) =", balanced_add(bt1, bt2))

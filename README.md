@@ -1,6 +1,6 @@
 # Trinary Python
 
-A comprehensive Python implementation for trinary (base-3) computing systems.
+A comprehensive Python implementation for trinary (base-3) computing systems, including **TritLang** - a programming language designed for LLMs and Machine Learning using balanced ternary (+1, 0, -1) arithmetic.
 
 ## Overview
 
@@ -181,9 +181,51 @@ python -m pytest tests/test_core.py -v
 6. Push to the branch (`git push origin feature/amazing-feature`)
 7. Open a Pull Request
 
+## TritLang Programming Language
+
+**TritLang** is a simple, easy-to-program language explicitly designed for LLMs and Machine Learning, using balanced ternary (+1, 0, -1) arithmetic.
+
+### Features
+
+- **Balanced Ternary Numbers**: Native support using `+` (1), `0`, and `-` (-1)
+- **Three-State Logic**: Built-in `true`, `false`, and `maybe` values
+- **ML-Friendly**: Built-in vector and matrix operations
+- **LLM-Friendly**: Clear, intuitive syntax
+
+### Quick Start
+
+```bash
+# Run a TritLang program
+python -m tritlang examples/hello_world.trit
+
+# Start interactive REPL
+python -m tritlang -i
+```
+
+### Example
+
+```tritlang
+// Balanced ternary numbers
+let a = +0-   // 8 in decimal
+let b = +-0   // 6 in decimal
+
+// Three-state logic
+let x = true
+let y = maybe
+let result = x and y  // maybe
+
+// Vectors for ML
+let v1 = [1, 2, 3, 4, 5]
+let sum = v1.sum()
+let mean = v1.mean()
+```
+
+See [TRITLANG_README.md](TRITLANG_README.md) for complete documentation.
+
 ## Roadmap
 
-- [ ] Trinary bytecode interpreter
+- [x] TritLang programming language interpreter
+- [ ] Trinary bytecode compiler for TritLang
 - [ ] Integration with Python's `decimal` module
 - [ ] SIMD optimizations for trinary operations
 - [ ] Trinary neural network utilities

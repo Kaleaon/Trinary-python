@@ -1,0 +1,27 @@
+// Vector operations for ML
+let v1 = [1, 2, 3, 4, 5]
+let v2 = [10, 20, 30, 40, 50]
+
+print("v1 =", v1)
+print("v2 =", v2)
+
+// Element-wise addition
+let v3 = v1 + v2
+print("v1 + v2 =", v3)
+
+// Scalar multiplication
+let v4 = v1 * 2
+print("v1 * 2 =", v4)
+
+// Dot product
+let dot = v1 * v2
+print("v1 · v2 =", dot)
+
+// Vector methods
+print("v1.sum() =", v1.sum())
+print("v1.mean() =", v1.mean())
+print("v1.length =", v1.len)
+
+// Index access
+print("v1[0] =", v1[0])
+print("v1[2] =", v1[2])
