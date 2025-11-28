@@ -16,7 +16,12 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Kaleaon/Trinary-python",
-    packages=find_packages(),
+    packages=find_packages(exclude=["tests"]),
+    entry_points={
+        "console_scripts": [
+            "tritlang=tritlang.cli:main",
+        ],
+    },
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",

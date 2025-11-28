@@ -1,0 +1,32 @@
+// Loops in TritLang
+
+// While loop
+let i = 0
+while i < 10 {
+    print("i =", i)
+    i = i + 1
+}
+
+// For loop with vector
+let numbers = [1, 2, 3, 4, 5]
+let sum = 0
+
+for num in numbers {
+    sum = sum + num
+    print("num =", num, "sum =", sum)
+}
+
+print("Final sum =", sum)
+
+// Nested loops
+print("Multiplication table:")
+let j = 1
+while j <= 5 {
+    let k = 1
+    while k <= 5 {
+        let product = j * k
+        print(j, "*", k, "=", product)
+        k = k + 1
+    }
+    j = j + 1
+}

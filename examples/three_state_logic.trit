@@ -1,0 +1,25 @@
+// Three-state logic demonstration
+// Values: true (1), false (0), maybe (-1)
+
+let x = true
+let y = maybe
+let z = false
+
+print("x =", x)
+print("y =", y)
+print("z =", z)
+
+// Three-state AND
+print("x and y =", x and y)  // true and maybe = maybe
+print("x and z =", x and z)  // true and false = false
+print("x and x =", x and x)  // true and true = true
+
+// Three-state OR
+print("x or z =", x or z)    // true or false = true
+print("y or z =", y or z)    // maybe or false = maybe
+print("z or z =", z or z)    // false or false = false
+
+// Three-state NOT
+print("not x =", not x)      // not true = false
+print("not z =", not z)      // not false = true
+print("not y =", not y)      // not maybe = maybe
